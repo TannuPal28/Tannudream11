@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="wrap_content" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/dimen_10dp"
+    android:padding="@dimen/dimen_2dp"
+    android:background="@drawable/list_bg_with_bg">
+<androidx.cardview.widget.CardView
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    app:cardBackgroundColor="@color/white"
+    app:cardPreventCornerOverlap="true"
+    app:cardElevation="0dp"
+    app:cardMaxElevation="0dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/dimen_10dp"
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_2dp"
+    android:id="@+id/rel_item_view">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:padding="@dimen/dimen_4dp"
+    android:background="#f8f9fb"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Indian Permier leauge"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="16sp"
+        android:textColor="#141517"
+        android:layout_margin="5dp" />
+</LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/linearlayout">
+
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="100dp">
+                <ImageView
+                    android:id="@+id/im_Team1bg"
+                    android:layout_width="60dp"
+                    android:translationX="-5dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:alpha="0.2"
+                    android:layout_centerHorizontal="false"
+                    android:src="@drawable/ind" />
+
+                <ImageView
+                    android:id="@+id/im_Team1"
+                    android:layout_width="40dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_height="40dp"
+                    android:translationY="-10dp"
+                    android:translationX="5dp"
+                    android:src="@drawable/ind" />
+
+                <TextView
+                    android:id="@+id/tv_TeamOneNamefull"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="India"
+                    android:layout_marginStart="@dimen/dimen_8dp"
+                    android:layout_alignParentBottom="true"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#757575"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_TeamsName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:background="@drawable/dark_rectangle_top_round"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="2dp"
+                    android:singleLine="true"
+                    android:maxLength="3"
+                    android:text="T20"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:weightSum="2"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp">
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:background="#3751ba" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_TeamsVS"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/circle_vs"
+                        android:paddingTop="1dp"
+                        android:text="vs"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:background="#3751ba" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+                    <TextView
+                    android:id="@+id/tv_TeamOneName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLength="3"
+                    android:maxLines="2"
+                    android:text="India"
+                    android:layout_alignParentBottom="true"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#1d2441"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_TimeRemained"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="@dimen/dimen_5dp"
+                    android:text="14:09:54"
+                    android:background="@drawable/time_bg"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:textColor="#cb2220"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="12sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_TeamTwoName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLength="3"
+                    android:maxLines="2"
+                    android:text="Aus"
+                    android:layout_alignParentBottom="true"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#1d2441"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_MatchTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/roundbutton"
+                    android:drawablePadding="5dp"
+                    android:elevation="3dp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:paddingRight="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="Upcoming"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:gravity="end|center_vertical">
+
+                <ImageView
+                    android:id="@+id/im_Team2bg"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:alpha="0.2"
+                    android:translationX="@dimen/dimen_5dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/aus" />
+
+                <ImageView
+                    android:id="@+id/im_Team2"
+                    android:layout_width="40dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_centerVertical="true"
+                    android:translationX="0dp"
+                    android:translationY="-10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_height="40dp"
+                    android:src="@drawable/aus" />
+
+                <TextView
+                    android:id="@+id/tv_TeamTwoNamefull"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Aus"
+                    android:layout_marginEnd="@dimen/dimen_8dp"
+                    android:layout_alignParentBottom="true"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#757575"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout2"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearlayout"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start">
+
+                <TextView
+                    android:id="@+id/tv_TeamOneScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tv_TeamOneOver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_TeamOneScore"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textAlignment="center" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/tv_TeamTwoScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tv_TeamTwoOver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_TeamTwoScore"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textAlignment="center" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_MatchResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearlayout2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text=""
+            android:textAlignment="center"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>
+</LinearLayout>
