@@ -51,13 +51,14 @@ public class MyContestFragment extends Fragment {
         adapter.addFragment(new FragmentMyResults(), "Completed");
         viewPager.setAdapter(adapter);
 
+        binding.myviewpager.setAdapter(adapter);
         binding.FragmentMyTab.setupWithViewPager(binding.myviewpager);
 
         for (int i = 0; i < binding.FragmentMyTab.getTabCount(); i++) {
             TextView tv = (TextView) LayoutInflater.from(getActivity()).inflate(R.layout.custom_tab, null);
             binding.FragmentMyTab.getTabAt(i).setCustomView(tv);
         }
-        binding.myviewpager.setOffscreenPageLimit(2);
+        viewPager.setOffscreenPageLimit(2);
 
     }
 

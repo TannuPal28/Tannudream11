@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -127,7 +128,7 @@ public class FragmentMyLive extends Fragment implements ResponseManager {
     @Override
     public void getResult(Context mContext, String type, String message, JSONObject result) {
         binding.swipeRefreshLayout.setRefreshing(false);
-        binding.tvNoDataAvailable.setVisibility(View.GONE);
+        binding.noDataFound.setVisibility(View.GONE);
         binding.RvMyLive.setVisibility(View.VISIBLE);
         binding.tvScoreRefresh.setVisibility(View.GONE);
 
@@ -149,7 +150,7 @@ public class FragmentMyLive extends Fragment implements ResponseManager {
     @Override
     public void onError(Context mContext, String type, String message) {
         binding.swipeRefreshLayout.setRefreshing(false);
-        binding.tvNoDataAvailable.setVisibility(View.VISIBLE);
+        binding.noDataFound.setVisibility(View.VISIBLE);
         binding.RvMyLive.setVisibility(View.GONE);
         binding.tvScoreRefresh.setVisibility(View.GONE);
     }
@@ -200,7 +201,7 @@ public class FragmentMyLive extends Fragment implements ResponseManager {
         @Override
         public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View itemView = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.adapter_my_match_list, parent, false);
+                    .inflate(R.layout.adapter_fixtures_list/*adapter_my_match_list*/, parent, false);
 
             return new MyViewHolder(itemView);
         }
@@ -222,12 +223,13 @@ public class FragmentMyLive extends Fragment implements ResponseManager {
             final String team_short_name2 = mListenerList.get(position).getTeam_short_name2();
 
             String contest_count = mListenerList.get(position).getContest_count();
+            Log.e("Contest count",contest_count);
             final String team_one_score=mListenerList.get(position).getTeam1Score();
             final String team_two_score=mListenerList.get(position).getTeam2Score();
             final String team_one_over=mListenerList.get(position).getTeam1Over();
             final  String team_two_over=mListenerList.get(position).getTeam2Over();
             final String match_status_note=mListenerList.get(position).getMatch_status_note();
-            holder.tv_JoinedContestCount.setText(contest_count+" Contest Joined");
+//            holder.tv_JoinedContestCount.setText(contest_count+" Contest Joined");
 
 
             holder.tv_TeamOneName.setText(team_name1);

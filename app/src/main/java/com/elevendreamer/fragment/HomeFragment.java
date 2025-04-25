@@ -64,8 +64,6 @@ public class HomeFragment extends Fragment implements ResponseManager {
         sessionManager = new SessionManager();
 
 
-
-
         setupViewPager(binding.viewpager);
 
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();

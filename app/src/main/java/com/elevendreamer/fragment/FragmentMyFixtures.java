@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -92,8 +94,19 @@ public class FragmentMyFixtures extends Fragment implements ResponseManager {
             }
         });
 
+        binding.btnUpcomingMatch.setOnClickListener(view -> {
+            replaceFragment(new HomeFragment());
+        });
+
 
         return binding.getRoot();
+    }
+
+    private void replaceFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.fragment_container, fragment);
+        transaction.commit();
     }
 
 
@@ -126,7 +139,7 @@ public class FragmentMyFixtures extends Fragment implements ResponseManager {
     public void getResult(Context mContext, String type, String message, JSONObject result) {
 
         binding.swipeRefreshLayout.setRefreshing(false);
-        binding.tvNoDataAvailable.setVisibility(View.GONE);
+        binding.noDataFound.setVisibility(View.GONE);
         binding.RvMyFixtures.setVisibility(View.VISIBLE);
 
         try {
@@ -149,7 +162,7 @@ public class FragmentMyFixtures extends Fragment implements ResponseManager {
     @Override
     public void onError(Context mContext, String type, String message) {
         binding.swipeRefreshLayout.setRefreshing(false);
-        binding.tvNoDataAvailable.setVisibility(View.VISIBLE);
+        binding.noDataFound.setVisibility(View.VISIBLE);
         binding.RvMyFixtures.setVisibility(View.GONE);
 
     }
