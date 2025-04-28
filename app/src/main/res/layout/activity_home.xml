@@ -2,131 +2,160 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".activity.HomeActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:id="@+id/head">
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:background="@drawable/toolbar_gradient_new"
-            android:theme="@style/MyDarkToolbarStyle"/>
-
-        <ImageView
-            android:id="@+id/im_AppIcon"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@drawable/ic_one_to_one_default_profile"
-            android:padding="2dp"
-            android:layout_marginStart="@dimen/dimen_15dp"
-            android:scaleType="fitXY"
-            android:visibility="visible"
-            android:layout_centerVertical="true"
-            />
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="120dp"
-            android:layout_height="30dp"
-            android:layout_toRightOf="@+id/im_AppIcon"
-            android:scaleType="fitCenter"
-            android:padding="@dimen/dimen_5dp"
-            android:src="@drawable/dream_11_horizontal_white"
-            android:visibility="visible"
-            android:layout_centerVertical="true"
-            />
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:text="All Upcoming Matches"
-            android:visibility="gone"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:fontFamily="@font/roboto_bold"
-            android:layout_centerVertical="true"
-
-            />
-        <ImageView
-            android:id="@+id/im_homewallet"
-            android:layout_width="wrap_content"
-            android:layout_height="55dp"
-            android:layout_marginEnd="5dp"
-            android:layout_toLeftOf="@+id/im_Notification"
-            android:src="@drawable/wallet_icon"
-            android:padding="10dp"
-            android:visibility="gone"
-            android:layout_centerVertical="true"
-            />
-        <ImageView
-            android:id="@+id/im_Notification"
-            android:layout_width="wrap_content"
-            android:layout_height="55dp"
-            android:src="@drawable/notification_icon_active"
-            android:padding="10dp"
-            android:visibility="gone"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            />
-
-    </RelativeLayout>
-
-
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:tabMode="fixed"
-        android:elevation="30dp"
-        android:background="@color/white"
-        app:tabIndicatorColor="#9b3036"
-        app:tabSelectedTextColor="#9b3036"
-        app:tabTextColor="#7b8899"
-        app:tabGravity="fill"
-        app:tabPaddingEnd="-2dp"
-        app:tabPaddingStart="-2dp"
-
-        app:tabTextAppearance="@style/MyTabLayoutTextAppearance1">
-        <com.google.android.material.tabs.TabItem
-            android:text="Home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/ic_d11_cup"
-
-            />
-        <com.google.android.material.tabs.TabItem
-            android:text="My Matches"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/contest_icon"/>
-        <com.google.android.material.tabs.TabItem
-            android:text="PROFILE"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/profile_icon"/>
-        <com.google.android.material.tabs.TabItem
-            android:text="MORE"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/more_icon"
-            />
-    </com.google.android.material.tabs.TabLayout>
-
-    <LinearLayout
-        android:id="@+id/fragment_container"
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_above="@+id/tabs"
-        android:layout_below="@+id/head"/>
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
 
-</RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            tools:context=".activity.HomeActivity">
+
+
+            <RelativeLayout
+                android:id="@+id/head"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/black"
+                >
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/toolbar_gradient_new"
+                    android:theme="@style/MyDarkToolbarStyle" />
+
+                <ImageView
+                    android:id="@+id/im_AppIcon"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dimen_15dp"
+                    android:padding="2dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_one_to_one_default_profile"
+                    android:visibility="visible" />
+
+
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/im_AppIcon"
+                    android:padding="@dimen/dimen_5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/dream_11_horizontal_white"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="60dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="All Upcoming Matches"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/im_homewallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toLeftOf="@+id/im_Notification"
+                    android:padding="10dp"
+                    android:src="@drawable/wallet_icon"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/im_Notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp"
+                    android:src="@drawable/notification_icon_active"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:elevation="30dp"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="#9b3036"
+                app:tabMode="fixed"
+                app:tabPaddingEnd="-2dp"
+                app:tabPaddingStart="-2dp"
+                app:tabSelectedTextColor="#9b3036"
+                app:tabTextAppearance="@style/MyTabLayoutTextAppearance1"
+
+                app:tabTextColor="#7b8899">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/ic_d11_cup"
+                    android:text="Home"
+                    />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/contest_icon"
+                    android:text="My Matches" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/profile_icon"
+                    android:text="PROFILE" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/more_icon"
+                    android:text="MORE" />
+            </com.google.android.material.tabs.TabLayout>
+
+            <LinearLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/tabs"
+                android:layout_below="@+id/head"
+                android:orientation="vertical" />
+
+
+        </RelativeLayout>
+
+
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/nav_header_main"
+            app:layout_constraintTop_toBottomOf="@+id/clTopView"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.drawerlayout.widget.DrawerLayout>
 </layout>

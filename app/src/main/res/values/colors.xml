@@ -17,10 +17,13 @@
     <color name="blue">#FF1784C7</color>
     <color name="deep_blue">#1c3f95</color>
     <color name="colorPink">#FF1D44</color>
-
+    <color name="addgreen">#1B5E20</color>
     <color name="team_header">#690125</color>
-
-
+    <color name="blue_grey400">#7D8BA2</color>
+    <color name="grey600">#797979</color>
+    <color name="grey100">#F5F5F5</color>
+    <color name="blue_grey900">#1A1A1A</color>
+    <color name="grey800">#4D4D4D</color>
     <color name="yellow_theme">#ECBD15</color>
     <color name="textColor">#1d2441</color>
 
@@ -29,8 +32,8 @@
     <color name="unselected_icon">#8e8e8e</color>
 
     <color name="leaderboard_text">#1e1e1e</color>
-    
-    
+
+
     <!--Sign In COlor-->
     <color name="login_sign_up">#ff6774</color>
     <!--<color name="btn_txt_color">#b01f40</color>-->
