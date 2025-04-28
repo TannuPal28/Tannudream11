@@ -96,5 +96,8 @@
     <string name="by_registering_i_agree_to_my11team_s">By registering, I agree to 11Dreamer\'s</string>
     <string name="not_avil_demo">This payment mode is not available on Demo Version</string>
     <string name="dream_coins_balance">DreamCoins Balance</string>
+    <string name="navigation_drawer_open">Open Drawer</string>
+    <string name="navigation_drawer_close">Close Drawer</string>
+
 
 </resources>

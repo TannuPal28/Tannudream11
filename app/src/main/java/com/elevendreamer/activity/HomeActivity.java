@@ -28,11 +28,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 import androidx.databinding.DataBindingUtil;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -53,6 +55,7 @@ import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 import com.elevendreamer.APICallingPackage.Class.APIRequestManager;
 import com.elevendreamer.APICallingPackage.Interface.ResponseManager;
+import com.google.android.material.navigation.NavigationView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -83,6 +86,7 @@ public class HomeActivity extends AppCompatActivity implements GoogleApiClient.O
     };
 
     Context context;
+
     HomeActivity activity;
     ResponseManager responseManager;
     APIRequestManager apiRequestManager;
@@ -119,12 +123,17 @@ public class HomeActivity extends AppCompatActivity implements GoogleApiClient.O
         sessionManager = new SessionManager();
         responseManager = this;
         apiRequestManager = new APIRequestManager(activity);
-
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
 
         Animation shake = AnimationUtils.loadAnimation(activity, R.anim.shake);
         binding.imNotification.startAnimation(shake);
+
+        //NavigationView navigationView= binding.navigationView;
+        //  View headerView= navigationView.getHeaderView(0);
+
+        //ImageView walletImage = headerView.findViewById(R.id.wallet6);
+        // walletImage.setColorFilter(ContextCompat.getColor(this, R.color.black), PorterDuff.Mode.SRC_IN);
 
         binding.imNotification.setOnClickListener(view -> {
             Intent i = new Intent(activity, NotificationActivity.class);
@@ -204,6 +213,22 @@ public class HomeActivity extends AppCompatActivity implements GoogleApiClient.O
 
         // Uncomment to enable in-app update check
         // callCheckUpdateVersion(false);
+
+        /*if (drawerLayout == null) {
+            Log.e("InitializationError", "DrawerLayout is null. Check XML file for proper ID.");
+        }*/
+
+        // setSupportActionBar(binding.toolbar);
+
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this,
+                binding.drawerLayout,
+                binding.toolbar,
+                R.string.navigation_drawer_open,
+                R.string.navigation_drawer_close
+        );
+        binding.drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
     }
 
     private void callCheckUpdateVersion(boolean isShowLoader) {
