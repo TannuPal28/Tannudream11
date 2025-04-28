@@ -57,17 +57,17 @@
                         <Button
                             android:id="@+id/btnUpcomingMatch"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="@dimen/dimen_30dp"
                             android:layout_below="@+id/tv_NoDataAvailable"
                             android:gravity="center"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentEnd="true"
                             android:layout_marginHorizontal="@dimen/dimen_100dp"
-                            android:background="@color/cardview_light_background"
+                            android:background="@drawable/btn_grey_background"
                             android:text="VIEW UPCOMING MATCHEs"
                             android:fontFamily="@font/roboto_bold"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/text_size_medium"
+                            android:textSize="@dimen/text_size_small"
                             android:layout_marginTop="@dimen/dimen_10dp"/>
                     </RelativeLayout>
                 </RelativeLayout>
