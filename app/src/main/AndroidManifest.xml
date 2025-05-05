@@ -38,6 +38,9 @@
         tools:ignore="HardcodedDebugMode"
         tools:replace="android:allowBackup,android:icon,android:roundIcon">
         <activity
+            android:name=".activity.ChatActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.MyBalanceActivity"
             android:exported="false" />
         <activity

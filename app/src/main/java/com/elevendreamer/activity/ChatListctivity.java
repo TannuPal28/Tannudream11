@@ -109,6 +109,11 @@ public class ChatListctivity extends AppCompatActivity {
             UserDummy userDummy= userDummyList.get(position);
             holder.textView.setText(userDummy.getName());
 
+            holder.textView.setOnClickListener(view -> {
+                Intent i = new Intent(activity,ChatActivity.class);
+                startActivity(i);
+            });
+
         }
 
         @Override
