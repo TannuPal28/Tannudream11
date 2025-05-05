@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDirectChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Direct Chat "
+        android:drawableStart="@drawable/add_comment_icon"
+        android:drawablePadding="@dimen/dimen_10dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_regular" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCreateGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create A Group"
+        android:drawableStart="@drawable/add_group"
+        android:drawablePadding="@dimen/dimen_10dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:fontFamily="@font/roboto_regular" />
+</LinearLayout>

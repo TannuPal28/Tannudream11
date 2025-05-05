@@ -35,5 +35,29 @@
         <item name="colorAccent">@color/white</item>
     </style>
 
+    <style name="CollapsedAppBar" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ExpandedAppBar" parent="TextAppearance.AppCompat.Display1">
+        <item name="android:textColor">@android:color/transparent</item> <!-- hide when expanded -->
+    </style>
+
+
+    <style name="SegmentOn">
+        <item name="android:layout_width">@dimen/dimen_20dp</item>
+        <item name="android:layout_height">@dimen/dimen_20dp</item>
+        <item name="android:layout_margin">@dimen/dimen_1dp</item>
+        <item name="android:background">#FFFFFF</item>
+    </style>
+
+
+    <style name="SegmentOff">
+        <item name="android:layout_width">@dimen/dimen_20dp</item>
+        <item name="android:layout_height">@dimen/dimen_20dp</item>
+        <item name="android:layout_margin">@dimen/dimen_1dp</item>
+        <item name="android:background">#000000</item>
+    </style>
 
 </resources>

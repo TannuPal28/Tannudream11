@@ -129,11 +129,6 @@ public class HomeActivity extends AppCompatActivity implements GoogleApiClient.O
         Animation shake = AnimationUtils.loadAnimation(activity, R.anim.shake);
         binding.imNotification.startAnimation(shake);
 
-        //NavigationView navigationView= binding.navigationView;
-        //  View headerView= navigationView.getHeaderView(0);
-
-        //ImageView walletImage = headerView.findViewById(R.id.wallet6);
-        // walletImage.setColorFilter(ContextCompat.getColor(this, R.color.black), PorterDuff.Mode.SRC_IN);
 
         binding.imNotification.setOnClickListener(view -> {
             Intent i = new Intent(activity, NotificationActivity.class);
@@ -147,6 +142,45 @@ public class HomeActivity extends AppCompatActivity implements GoogleApiClient.O
             } else {
                 Log.e("HomeActivity", "Activity is null!");
             }
+        });
+
+        View headerView=  binding.navigationView.getHeaderView(0);
+        headerView.findViewById(R.id.tvMyInfo).setOnClickListener(view -> {
+            Intent i=  new Intent(this,MyInfoSettingsActivity.class);
+            startActivity(i);
+        });
+
+        headerView.findViewById(R.id.tvWinners).setOnClickListener(view -> {
+            Intent i = new Intent(this, Winners.class);
+            startActivity(i);
+        });
+
+        headerView.findViewById(R.id.chat).setOnClickListener(view -> {
+            Intent i = new Intent(this, ChatListctivity.class);
+            startActivity(i);
+        });
+        headerView.findViewById(R.id.tvHowToPlay).setOnClickListener(view -> {
+            Intent i = new Intent(this,HowToPlayActivity.class);
+            startActivity(i);
+        });
+        headerView.findViewById(R.id.tvMore).setOnClickListener(view -> {
+            Intent i = new Intent(this, MoreActivity.class);
+            startActivity(i);
+        });
+
+        headerView.findViewById(R.id.cardView).setOnClickListener(view -> {
+            Intent i= new Intent(this,MyProfileActivity.class);
+            startActivity(i);
+        });
+
+        headerView.findViewById(R.id.llMyBalance).setOnClickListener(view -> {
+            Intent i= new Intent(this,MyBalanceActivity.class);
+            startActivity(i);
+        });
+
+        headerView.findViewById(R.id.addCash).setOnClickListener(view -> {
+            Intent i= new Intent(this,AddCashActivity.class);
+            startActivity(i);
         });
 
         Ravenscroft = Typeface.createFromAsset(this.getAssets(), "Ravenscroft.ttf");

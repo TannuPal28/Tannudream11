@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dimen_10dp"
+        android:layout_margin="@dimen/dimen_5dp"
+        app:cardBackgroundColor="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCountryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="India T20 League"
+                android:padding="@dimen/dimen_10dp"
+                android:textColor="@color/blue_grey900"
+                android:drawableStart="@drawable/mail"
+                android:drawableEnd="@drawable/arrow_icon_mr"
+                android:backgroundTint="@color/white"
+                android:drawablePadding="@dimen/dimen_10dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCountryName"
+                android:paddingHorizontal="@dimen/dimen_10dp"
+                android:text="@string/winner_count"
+                android:textColor="@color/grey600"
+                android:textSize="@dimen/dimen_12sp"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:layout_below="@id/tvCount"
+                app:cardCornerRadius="@dimen/dimen_10dp"
+                app:cardBackgroundColor="@color/purple_50"
+                android:layout_marginHorizontal="@dimen/dimen_20dp"
+                android:layout_marginVertical="@dimen/dimen_10dp"
+                android:paddingHorizontal="20dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/userIcon"
+                        android:layout_width="@dimen/dimen_40dp"
+                        android:layout_height="@dimen/dimen_40dp"
+                        android:src="@drawable/user_icon1"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvUserNAme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dimen_10dp"
+                        android:layout_toStartOf="@+id/appCompatTextView"
+                        android:layout_toEndOf="@+id/userIcon"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="MAJHARUL Kings"
+                        android:textColor="@color/blue_grey900"
+                        android:textSize="@dimen/dimen_12sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPlayingTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/userIcon"
+                        android:layout_below="@id/tvUserNAme"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="playing since 2023"
+                        android:textColor="@color/blue_grey900"
+                        android:textSize="8dp"
+                        android:layout_marginStart="@dimen/dimen_10dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/appCompatTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="4 crore"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_12sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTeamName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="DC VC KKr"
+                        android:textColor="@color/grey600"
+                        android:textSize="@dimen/dimen_12sp"
+                      android:layout_below="@id/appCompatTextView"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

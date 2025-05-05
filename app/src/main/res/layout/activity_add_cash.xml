@@ -183,7 +183,7 @@
             android:id="@+id/RV_AddCashOffer"
            android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:visibility="gone"
+            android:visibility="visible"
             android:layout_below="@+id/LL_AddCashOffer"
             android:layout_width="match_parent"
 

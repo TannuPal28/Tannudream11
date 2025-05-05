@@ -21,17 +21,22 @@
     <color name="team_header">#690125</color>
     <color name="blue_grey400">#7D8BA2</color>
     <color name="grey600">#797979</color>
+    <color name="grey500">#9E9E9E</color>
     <color name="grey100">#F5F5F5</color>
+    <color name="grey400">#BDBDBD</color>
     <color name="blue_grey900">#1A1A1A</color>
     <color name="grey800">#4D4D4D</color>
     <color name="yellow_theme">#ECBD15</color>
     <color name="textColor">#1d2441</color>
+    <color name="greenBtn">#109E38</color>
 
 
     <color name="selected_icon">#1c2e46</color>
     <color name="unselected_icon">#8e8e8e</color>
 
     <color name="leaderboard_text">#1e1e1e</color>
+    <color name="brown_50">#EFEBE9</color>
+    <color name="pink_50">#FCE4EC</color>
 
 
     <!--Sign In COlor-->
@@ -50,6 +55,8 @@
     <color name="hint">#DDD9D9</color>
 
     <color name="pink_btn">#AD2E3A</color>
+    <color name="orange_50">#F7DCD8</color>
+    <color name="purple_50">#DBD2E7</color>
     <color name="txt_color_dark_back">#fff</color>
     <color name="bckicon">#fff</color>
     <color name="header_color">#fff</color>
@@ -60,6 +67,7 @@
     <color name="rank_txt">#1e1e1e</color>
     <color name="rank_view_line">#dbdbdb</color>
     <color name="cstm_tb_layout_color">@color/colorPrimary</color>
+    <color name="red_a700">#D50000</color>
     <color name="dark_rectangle">#ee4d5b</color>
     <color name="dark_rect_stroke">#ee4d5b</color>
     <color name="gview_item">@color/colorPrimary</color>
@@ -86,6 +94,7 @@
     <color name="create_team_selected_color">@color/colorPrimary</color>
     <color name="create_team_unselected_color">@color/hint</color>
 <color name="red">#ee4d5b</color>
+<color name="green_50">#E8F5E9</color>
 
 </resources>
     <!--#021C1E-->

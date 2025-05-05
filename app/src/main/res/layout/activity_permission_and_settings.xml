@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey100"
+        tools:context=".activity.PermissionAndSettingsActivity">
+
+        <include
+            android:id="@+id/head"
+            layout="@layout/activity_mainheader"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/head">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPermission"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/permissions"
+                    android:textSize="@dimen/dimen_15dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_margin="@dimen/dimen_10dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvPermission"
+                    android:padding="@dimen/dimen_10dp"
+                    android:background="@color/white">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDiscoverable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/make_me_discoverable"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:fontFamily="@font/roboto_bold"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvDiscoverable"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:text="@string/friends_can_find_and_follow_you_when_they_sync_their_phone_contacts"
+                        android:textSize="@dimen/dimen_12sp"/>
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/grey100"
+                    android:layout_below="@id/rlOne"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewOne"
+                    android:padding="@dimen/dimen_10dp"
+                    android:background="@color/white">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAllowSms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/make_me_discoverable"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:fontFamily="@font/roboto_bold"/>
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:paddingVertical="@dimen/dimen_5dp"
+                    android:background="@color/grey100"
+                    android:layout_below="@id/rlTwo"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/rlThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewTwo"
+                    android:padding="@dimen/dimen_10dp"
+                    android:background="@color/white">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAllowWhatsappMsg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/make_me_discoverable"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:fontFamily="@font/roboto_bold"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvAllowWhatsappMsg"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:text="@string/access_dream11_updates_offers_and_support"
+                        android:textSize="@dimen/dimen_12sp"/>
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPermissionInformation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/personal_information"
+                    android:textSize="@dimen/dimen_15dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_margin="@dimen/dimen_10dp"
+                    android:layout_below="@id/rlThree"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvPermissionInformation"
+                    android:padding="@dimen/dimen_10dp"
+                    android:background="@color/white">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDisPlayFullName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/display_my_full_name_on_profile"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:fontFamily="@font/roboto_bold"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvDisPlayFullName"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:text="@string/your_full_name_will_be_visible_to_everyone_who_views_your_profile"
+                        android:textSize="@dimen/dimen_12sp"/>
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvGamePlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gamePlay"
+                    android:textSize="@dimen/dimen_15dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_margin="@dimen/dimen_10dp"
+                    android:layout_below="@id/rlFour"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/rlFive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvGamePlay"
+                    android:padding="@dimen/dimen_10dp"
+                    android:background="@color/white">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvShowMyPreviousTeam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/show_my_previous_teams"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:fontFamily="@font/roboto_bold"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvShowMyPreviousTeam"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:text="@string/people_who_view_you_profile_will_be_able_to_see_teams_that_you_have_created"
+                        android:textSize="@dimen/dimen_12sp"/>
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:paddingVertical="@dimen/dimen_5dp"
+                    android:background="@color/grey100"
+                    android:layout_below="@id/rlFive"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlSix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewThree"
+                    android:padding="@dimen/dimen_10dp"
+                    android:background="@color/white">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAllowMsgRequest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/allow_msg_request"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:fontFamily="@font/roboto_bold"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvAllowMsgRequest"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:text="@string/people_will_be_able_to_send_you_message_request"
+                        android:textSize="@dimen/dimen_12sp"/>
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:paddingVertical="@dimen/dimen_5dp"
+                    android:background="@color/grey100"
+                    android:layout_below="@id/rlSix"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlSeven"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewFour"
+                    android:padding="@dimen/dimen_10dp"
+                    android:background="@color/white">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAllowChanges"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/allow_challenege"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:fontFamily="@font/roboto_bold"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvAllowChanges"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:text="@string/people_you_dont_have_a_dm_with_will_be_able_to_challenge_you_to_contests"
+                        android:textSize="@dimen/dimen_12sp"/>
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSafety"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/safety"
+                    android:textSize="@dimen/dimen_15dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_margin="@dimen/dimen_10dp"
+                    android:layout_below="@id/rlSeven"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlEight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvSafety"
+                    android:padding="@dimen/dimen_10dp"
+                    android:background="@color/white">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPeopleHaveBlocked"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/people_i_have_blocked"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:drawablePadding="@dimen/dimen_10dp"
+                        android:drawableEnd="@drawable/arrow_icon_mr"
+                        android:fontFamily="@font/roboto_bold"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvPeopleHaveBlocked"
+                        android:text="@string/checkout_the_people_who_you_have_blocked"
+                        android:textSize="@dimen/dimen_12sp"/>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+</layout>

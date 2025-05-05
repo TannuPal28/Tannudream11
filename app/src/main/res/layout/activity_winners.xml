@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.Winners">
+
+        <include
+            layout="@layout/activity_mainheader"
+            android:id="@+id/head"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/head">
+
+            <RelativeLayout
+                android:id="@+id/rlTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black">
+
+                <LinearLayout
+                    android:id="@+id/llPeopleCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_10dp">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/yellow_theme"
+                        android:text="1,594 Crorepatis"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:layout_weight="1"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="1,06,922 Lakhpatis"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPeople"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llPeopleCount"
+                    android:textColor="@color/white"
+                    android:text="Ramiz is won 4 crore in DC vs KKR"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/dimen_12dp"/>
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rlTop">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--<fragment
+                        android:id="@+id/mapFragment"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"/>-->
+
+                    <com.google.android.gms.maps.MapView
+                        android:id="@+id/mapView"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivTopImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:src="@drawable/winner_img"
+                        android:layout_below="@+id/mapView"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvWinners"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Winners in top tours"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textSize="16sp"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_marginHorizontal="@dimen/dimen_15dp"
+                        android:layout_below="@id/ivTopImage"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvWinnerList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvWinners"
+                        android:clipToPadding="false"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        tools:listitem="@layout/adapter_winner_list"
+                        android:overScrollMode="never" />
+
+                    <me.relex.circleindicator.CircleIndicator2
+                        android:id="@+id/indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rvWinnerList"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvJoinedTours"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tours you joined"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textSize="16sp"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:layout_marginHorizontal="@dimen/dimen_15dp"
+                        android:layout_below="@id/indicator"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvTourJoinedList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvJoinedTours"
+                        android:clipToPadding="false"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        tools:listitem="@layout/adapter_joined_tours_list"
+                        android:overScrollMode="never"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTrustedUsers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Trusted by millions"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textSize="16sp"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:layout_marginHorizontal="@dimen/dimen_15dp"
+                        android:layout_below="@id/rvTourJoinedList"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvMillionUsers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvTrustedUsers"
+                        android:clipToPadding="false"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        tools:listitem="@layout/adapter_millions_trusted_user_list"
+                        android:overScrollMode="never"
+                        android:layout_marginTop="10dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRealWinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="REAL WINNER"
+                        android:textColor="@color/grey500"
+                        android:layout_below="@+id/rvMillionUsers"
+                        android:textSize="@dimen/dimen_30dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textStyle="italic"
+                        android:layout_marginTop="@dimen/dimen_40dp"
+                        android:layout_marginHorizontal="@dimen/dimen_10dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="REAL STORIES"
+                        android:textColor="@color/grey500"
+                        android:layout_below="@+id/tvRealWinner"
+                        android:textSize="@dimen/dimen_30dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textStyle="italic"
+                        android:layout_marginBottom="@dimen/dimen_30dp"
+                        android:layout_marginHorizontal="@dimen/dimen_10dp"/>
+
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

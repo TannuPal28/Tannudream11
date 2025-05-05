@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.ManageAccount">
+        <include
+            android:id="@+id/head"
+            layout="@layout/activity_mainheader"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_below="@id/head">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/rlOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_14dp"
+                    android:background="@color/grey100">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/cvProfile"
+                        android:layout_width="@dimen/dimen_50dp"
+                        android:layout_height="@dimen/dimen_50dp"
+                        android:src="@drawable/profile_d"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/dimen_15dp"
+                        android:layout_toEndOf="@id/cvProfile"
+                        android:layout_alignTop="@id/cvProfile"
+                        android:layout_alignBottom="@id/cvProfile"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Tannu Pal"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_16sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlOne"
+                    android:layout_margin="@dimen/dimen_15dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rvUserImage"
+                        android:layout_width="@dimen/dimen_40dp"
+                        android:layout_height="@dimen/dimen_40dp"
+                        android:background="@drawable/btn_grey_background"
+                        android:layout_alignParentStart="true"
+                        android:gravity="center">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivNameCircle"
+                            android:layout_width="@dimen/dimen_20dp"
+                            android:layout_height="@dimen/dimen_20dp"
+                            android:src="@drawable/profile_d"
+                            android:scaleType="centerCrop"/>
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:layout_marginStart="@dimen/dimen_10dp"
+                        android:textColor="@color/blue_grey400"
+                        android:layout_toEndOf="@+id/rvUserImage"
+                        android:layout_alignParentEnd="true"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tannu Pal"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="@dimen/dimen_10dp"
+                        android:layout_toEndOf="@+id/rvUserImage"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/tvName"/>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/userName"
+                        android:layout_alignStart="@+id/userName"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginVertical="@dimen/dimen_5dp"
+                        android:background="@color/grey100" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlTwo"
+                    android:layout_marginHorizontal="@dimen/dimen_15dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rvUserNumber"
+                        android:layout_width="@dimen/dimen_40dp"
+                        android:layout_height="@dimen/dimen_40dp"
+                        android:background="@drawable/btn_grey_background"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivMobile"
+                            android:layout_width="@dimen/dimen_20dp"
+                            android:layout_height="@dimen/dimen_20dp"
+                            android:src="@drawable/mobile_phone"
+                            android:scaleType="centerCrop"/>
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mobile no."
+                        android:layout_marginStart="@dimen/dimen_10dp"
+                        android:textColor="@color/blue_grey400"
+                        android:layout_toEndOf="@+id/rvUserNumber"
+                        android:layout_alignParentEnd="true"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/userMobileNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8787878787"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="@dimen/dimen_10dp"
+                        android:layout_toEndOf="@+id/rvUserNumber"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/tvMobile"/>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/userMobileNo"
+                        android:layout_alignStart="@+id/userMobileNo"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginVertical="@dimen/dimen_5dp"
+                        android:background="@color/grey100" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlThree"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginHorizontal="@dimen/dimen_15dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rvUserEmailAddress"
+                        android:layout_width="@dimen/dimen_40dp"
+                        android:layout_height="@dimen/dimen_40dp"
+                        android:background="@drawable/btn_grey_background"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivEmail"
+                            android:layout_width="@dimen/dimen_20dp"
+                            android:layout_height="@dimen/dimen_20dp"
+                            android:src="@drawable/mail"
+                            android:scaleType="centerCrop"/>
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email Address"
+                        android:layout_marginStart="@dimen/dimen_10dp"
+                        android:textColor="@color/blue_grey400"
+                        android:layout_toEndOf="@+id/rvUserEmailAddress"
+                        android:layout_alignParentEnd="true"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/userEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="tannupal510@gmail.com"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="@dimen/dimen_10dp"
+                        android:layout_toEndOf="@+id/rvUserEmailAddress"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/tvEmail"/>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/userEmail"
+                        android:layout_alignStart="@+id/userEmail"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginVertical="@dimen/dimen_5dp"
+                        android:background="@color/grey100" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlFive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlFour"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginHorizontal="@dimen/dimen_15dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rvAddress"
+                        android:layout_width="@dimen/dimen_40dp"
+                        android:layout_height="@dimen/dimen_40dp"
+                        android:background="@drawable/btn_grey_background"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivAddress"
+                            android:layout_width="@dimen/dimen_20dp"
+                            android:layout_height="@dimen/dimen_20dp"
+                            android:src="@drawable/pin"
+                            android:scaleType="centerCrop"/>
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Address"
+                        android:layout_marginStart="@dimen/dimen_10dp"
+                        android:textColor="@color/blue_grey400"
+                        android:layout_toEndOf="@+id/rvAddress"
+                        android:layout_alignParentEnd="true"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/userAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="132/bd malviya nagar jaipur"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="@dimen/dimen_10dp"
+                        android:layout_toEndOf="@+id/rvAddress"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/tvAddress"/>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/userAddress"
+                        android:layout_alignStart="@+id/userAddress"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginVertical="@dimen/dimen_5dp"
+                        android:background="@color/grey100" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlSix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlFive"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginHorizontal="@dimen/dimen_15dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rvADateOfBirth"
+                        android:layout_width="@dimen/dimen_40dp"
+                        android:layout_height="@dimen/dimen_40dp"
+                        android:background="@drawable/btn_grey_background"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivDateOfBirth"
+                            android:layout_width="@dimen/dimen_20dp"
+                            android:layout_height="@dimen/dimen_20dp"
+                            android:src="@drawable/date_of_birth"
+                            android:scaleType="centerCrop"/>
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDateOfBirth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date of birth"
+                        android:layout_marginStart="@dimen/dimen_10dp"
+                        android:textColor="@color/blue_grey400"
+                        android:layout_toEndOf="@+id/rvADateOfBirth"
+                        android:layout_alignParentEnd="true"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/userDateOfBirth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="03.04.2025"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="@dimen/dimen_10dp"
+                        android:layout_toEndOf="@+id/rvADateOfBirth"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/tvDateOfBirth"/>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/userDateOfBirth"
+                        android:layout_alignStart="@+id/userDateOfBirth"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginVertical="@dimen/dimen_5dp"
+                        android:background="@color/grey100" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+    </RelativeLayout>
+</layout>

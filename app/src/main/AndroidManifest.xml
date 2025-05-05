@@ -19,23 +19,65 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES "/>
-
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES " />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
-        android:name="com.elevendreamer.application.BaseApplication"
+        android:name=".application.BaseApplication"
         android:allowBackup="false"
+        android:debuggable="true"
         android:icon="@drawable/logo_splash"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@drawable/logo_splash"
         android:supportsRtl="true"
-        android:largeHeap="true"
-        android:debuggable="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
-        tools:replace="android:allowBackup,android:icon,android:roundIcon"
-        tools:ignore="HardcodedDebugMode">
-        <uses-library android:name="org.apache.http.legacy" android:required="false" />
+        tools:ignore="HardcodedDebugMode"
+        tools:replace="android:allowBackup,android:icon,android:roundIcon">
+        <activity
+            android:name=".activity.MyBalanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MyProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.HowToPlayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.DirectChatContacts"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ChatListctivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Winners"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ManageAccount"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AppLanguageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.BlockedListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.PermissionAndSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MyInfoSettingsActivity"
+            android:exported="false" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.elevendreamer.provider"
@@ -47,7 +89,7 @@
         </provider>
 
         <activity
-            android:name="com.elevendreamer.activity.SplashScreen"
+            android:name=".activity.SplashScreen"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -57,179 +99,166 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.elevendreamer.activity.MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="false"
-
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.elevendreamer.activity.RegistrationActivity"
+            android:name=".activity.RegistrationActivity"
             android:exported="false"
-
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.elevendreamer.activity.HomeActivity"
+            android:name=".activity.HomeActivity"
             android:exported="false"
-
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.elevendreamer.activity.LoginActivity"
+            android:name=".activity.LoginActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="com.elevendreamer.activity.VerifyOTPActivity"
+            android:name=".activity.VerifyOTPActivity"
             android:exported="false"
-
             android:screenOrientation="portrait" />
-    <activity
-            android:name="com.elevendreamer.activity.LoginOtpAtivity"
+        <activity
+            android:name=".activity.LoginOtpAtivity"
             android:exported="false"
-
             android:screenOrientation="portrait" />
 
-        <receiver android:name="com.elevendreamer.utils.IncomingSms"
+        <receiver
+            android:name=".utils.IncomingSms"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
 
-        <meta-data android:name="com.facebook.sdk.ApplicationId"
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
             android:exported="false"
+            android:value="@string/facebook_app_id" />
 
-            android:value="@string/facebook_app_id"/>
-
-        <activity android:name="com.facebook.FacebookActivity"
-            android:configChanges=
-                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name" />
         <activity
             android:name="com.facebook.CustomTabActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="com.elevendreamer.activity.ForgotVerifyOTPActivity"
+            android:name=".activity.ForgotVerifyOTPActivity"
             android:exported="false"
-
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.elevendreamer.activity.NewPasswordActivity"
+            android:name=".activity.NewPasswordActivity"
             android:exported="false"
-
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.elevendreamer.activity.ContestListActivity"
+            android:name=".activity.ContestListActivity"
             android:exported="false"
-
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.elevendreamer.activity.CreateTeamActivity"
+            android:name=".activity.CreateTeamActivity"
             android:exported="false"
-
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.elevendreamer.activity.ChooseCandVCActivity"
+            android:name=".activity.ChooseCandVCActivity"
             android:exported="false"
-
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.elevendreamer.activity.MyTeamListActivity"
+            android:name=".activity.MyTeamListActivity"
             android:exported="false"
-
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.elevendreamer.activity.JoinContestActivity"
+            android:name=".activity.JoinContestActivity"
             android:exported="false"
-
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.elevendreamer.activity.MyJoinedFixtureContestListActivity"
+            android:name=".activity.MyJoinedFixtureContestListActivity"
             android:exported="false"
-
             android:screenOrientation="portrait" />
-        <activity android:name="com.elevendreamer.activity.MyFixtureContestDetailsActivity"
+        <activity
+            android:name=".activity.MyFixtureContestDetailsActivity"
             android:exported="false"
-
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.elevendreamer.activity.MyJoinedLiveContestListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyJoinedLiveContestListActivity"
             android:exported="false"
-
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.elevendreamer.activity.MyJoinedResultContestListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyJoinedResultContestListActivity"
             android:exported="false"
-
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.elevendreamer.activity.MyResultContestDetailsActivity"
-            android:exported="false"
-            />
-        <activity android:name="com.elevendreamer.activity.MyLiveContestDetailsActivity"
-            android:exported="false"
-            />
-        <activity android:name="com.elevendreamer.activity.PaymentOptionActivity"
-            android:exported="false"
-            />
-        <activity android:name="com.elevendreamer.activity.MyAccountActivity"
-            android:exported="false"
-            />
-        <activity android:name="com.elevendreamer.activity.PaytmActivity"
-            android:exported="false"
-            />
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyResultContestDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MyLiveContestDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.PaymentOptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MyAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.PaytmActivity"
+            android:exported="false" />
         <activity
             android:name="com.paytm.pgsdk.PaytmPGActivity"
             android:configChanges="keyboardHidden|orientation|keyboard"
             android:exported="false"
-
             android:screenOrientation="portrait" />
-        <activity android:name="com.elevendreamer.activity.EditProfileActivity"
+        <activity
+            android:name=".activity.EditProfileActivity"
             android:exported="false"
-
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.elevendreamer.activity.AddCashActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddCashActivity"
             android:exported="false"
-
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.elevendreamer.activity.MyTransactionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyTransactionActivity"
             android:exported="false"
-
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.elevendreamer.activity.NotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NotificationActivity"
             android:exported="false"
-
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.elevendreamer.activity.InviteFriendsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.InviteFriendsActivity"
             android:exported="false"
-
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.elevendreamer.activity.InvitedFriendListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.InvitedFriendListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.PaymentConfirmationActivity"
             android:exported="false"
-            />
-        <activity android:name="com.elevendreamer.activity.PaymentConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WebviewAcitivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.WithdrawAmountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.PayUMoneyPaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.GlobalRankActivity"
             android:exported="false"
-
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.elevendreamer.activity.WebviewAcitivity"
-            android:exported="false"
-            />
-        <activity android:name="com.elevendreamer.activity.WithdrawAmountActivity"
-            android:exported="false"
-            />
-        <activity android:name="com.elevendreamer.activity.PayUMoneyPaymentActivity"
-            android:exported="false"
-            />
-        <activity android:name="com.elevendreamer.activity.GlobalRankActivity"
-            android:exported="false"
-
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
 
         <service
-            android:name="com.elevendreamer.FirebaseMessagingService"
+            android:name=".FirebaseMessagingService"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -237,7 +266,7 @@
             </intent-filter>
         </service>
         <service
-            android:name="com.elevendreamer.FirebaseInstanceIDService"
+            android:name=".FirebaseInstanceIDService"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -245,34 +274,38 @@
             </intent-filter>
         </service>
 
-        <activity android:name="com.elevendreamer.activity.UploadKYCActivity"
+        <activity
+            android:name=".activity.UploadKYCActivity"
             android:exported="false"
-
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.elevendreamer.activity.CreateContestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CreateContestActivity"
             android:exported="false"
-
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.elevendreamer.activity.SelectPrizeCreateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SelectPrizeCreateActivity"
             android:exported="false"
-
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.elevendreamer.activity.EnterInviteCodeContestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EnterInviteCodeContestActivity"
             android:exported="false"
-
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.elevendreamer.activity.InviteInContestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.InviteInContestActivity"
             android:exported="false"
-
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.elevendreamer.activity.TrakNPayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TrakNPayActivity"
             android:exported="false"
-
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.elevendreamer.activity.CashfreeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CashfreeActivity"
             android:exported="false"
+            android:screenOrientation="portrait" />
 
-            android:screenOrientation="portrait"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_API_KEY_HERE" />
     </application>
 
 </manifest>

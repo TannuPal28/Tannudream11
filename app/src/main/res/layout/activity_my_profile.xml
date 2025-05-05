@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!-- Add your binding variables here -->
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey100">
+
+        <!-- Static Header Image -->
+        <ImageView
+            android:id="@+id/headerImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_100dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/header_img"
+            android:contentDescription="@null" />
+
+        <!-- Overlay container for back button and title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_100dp"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="@android:color/transparent">
+
+            <!-- Back Button -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:tint="@android:color/white" />
+
+            <!-- Title Text -->
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tannu Pal"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/dimen_16sp"
+                android:layout_marginStart="16dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <!-- Scroll view overlapping image -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:paddingTop="16dp"
+            android:clipToPadding="false"
+            android:background="@android:color/transparent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey100">
+
+                <RelativeLayout
+                    android:id="@+id/userInfoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dimen_10dp"
+                    android:background="@drawable/bg_scroll_rounded">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circleImageView"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/profile_icon" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen_30dp"
+                        android:layout_height="@dimen/dimen_30dp"
+                        android:layout_alignEnd="@+id/circleImageView"
+                        android:layout_alignBottom="@+id/circleImageView"
+                        android:background="@drawable/black_dot_selected">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:padding="@dimen/dimen_5dp"
+                            android:src="@drawable/camera" />
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginHorizontal="@dimen/dimen_10dp"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:layout_toEndOf="@+id/circleImageView"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Tannu Pal"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_16sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvUSerFullName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginHorizontal="@dimen/dimen_10dp"
+                        android:layout_toEndOf="@+id/circleImageView"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Tannu Pal"
+                        android:textColor="@color/grey400"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:layout_below="@+id/userName"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSkillScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:layout_marginHorizontal="@dimen/dimen_10dp"
+                        android:layout_toEndOf="@+id/circleImageView"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Skill Score: 524"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/dimen_14dp"
+                        android:layout_below="@+id/tvUSerFullName"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginHorizontal="@dimen/dimen_10dp"
+                        android:layout_marginTop="@dimen/dimen_30dp"
+                        android:layout_marginBottom="@dimen/dimen_10dp"
+                        android:layout_below="@+id/circleImageView">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:text="@string/follower"
+                            android:layout_marginHorizontal="@dimen/dimen_10dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:text="@string/follower"
+                            android:layout_marginHorizontal="@dimen/dimen_10dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:text="@string/follower"
+                            android:layout_marginHorizontal="@dimen/dimen_10dp"/>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rvScoreView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-10dp"
+                    android:background="@drawable/bg_grey_scroll_rounded"
+                    android:layout_below="@+id/userInfoView">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvChampions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:text="Champions Club"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:layout_marginHorizontal="@dimen/dimen_15dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvChampionsClub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/dimen_10dp"
+                        app:cardBackgroundColor="@color/white"
+                        android:layout_margin="@dimen/dimen_15dp"
+                        android:layout_below="@+id/tvChampions">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/appCompatImageView"
+                                android:layout_width="@dimen/dimen_100dp"
+                                android:layout_height="@dimen/dimen_100dp"
+                                android:scaleType="centerCrop"
+                                android:layout_margin="@dimen/dimen_10dp"
+                                android:src="@drawable/winner_img" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvChallengelevel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="@dimen/dimen_10dp"
+                                android:layout_marginHorizontal="@dimen/dimen_10dp"
+                                android:layout_toEndOf="@+id/appCompatImageView"
+                                android:fontFamily="@font/roboto_bold"
+                                android:layout_alignParentTop="true"
+                                android:text="Challenger Level"
+                                android:textColor="@color/greenBtn"
+                                android:textSize="@dimen/dimen_16sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvChallengeValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="@dimen/dimen_10dp"
+                                android:layout_marginHorizontal="@dimen/dimen_10dp"
+                                android:layout_toEndOf="@+id/appCompatImageView"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="Earn 149 to upgrade your club level"
+                                android:textColor="@color/grey400"
+                                android:textSize="@dimen/dimen_12sp"
+                                android:layout_below="@+id/tvChallengelevel"/>
+
+                           <com.google.android.material.progressindicator.LinearProgressIndicator
+                               android:layout_width="match_parent"
+                               android:layout_height="@dimen/dimen_10dp"
+                               android:layout_below="@+id/tvChallengeValue"
+                               android:layout_marginTop="@dimen/dimen_10dp"
+                               android:layout_marginHorizontal="@dimen/dimen_10dp"
+                               app:trackColor="@color/greenBtn"
+                               app:indicatorColor="@color/black"
+                               android:layout_toEndOf="@+id/appCompatImageView"/>
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+               <!--     <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Skill Score"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:layout_below="@id/cvChampionsClub"
+                        android:layout_alignParentStart="true"
+                        android:paddingHorizontal="@dimen/dimen_20dp"
+                        android:layout_marginHorizontal="@dimen/dimen_10dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Career Stats"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:layout_below="@id/cvChampionsClub"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toEndOf="@+id/tvScore"
+                        android:layout_marginHorizontal="@dimen/dimen_10dp"/>-->
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:text="Skill Score"
+                        android:layout_below="@id/cvChampionsClub"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:layout_marginHorizontal="@dimen/dimen_15dp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#F8F8F8"
+                        android:padding="@dimen/dimen_10dp"
+                        android:layout_below="@+id/tvScore">
+
+                    <!-- Row: Skill Score and Career Stats -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginBottom="16dp">
+
+
+                    <!-- Skill Score -->
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/white_rectangle"
+                        android:elevation="2dp"
+                        android:padding="@dimen/dimen_5dp">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginTop="8dp">
+
+                            <!-- Skill digits -->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="60dp"
+                                android:gravity="center"
+                                android:background="@drawable/bg_black_btn"
+                                android:text="5"
+                                android:textColor="@android:color/white"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="60dp"
+                                android:gravity="center"
+                                android:background="@drawable/bg_black_btn"
+                                android:text="2"
+                                android:textColor="@android:color/white"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginEnd="4dp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="60dp"
+                                android:gravity="center"
+                                android:background="@drawable/bg_black_btn"
+                                android:text="4"
+                                android:textColor="@android:color/white"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="View for all sports"
+                            android:textColor="#FF3D00"
+                            android:textSize="14sp"
+                            android:drawableEnd="@drawable/arrow_icon_mr"
+                            android:drawablePadding="4dp"
+                            android:layout_marginTop="8dp" />
+
+                        </LinearLayout>
+
+
+                        <!-- Career Stats -->
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/grey100"
+                            android:elevation="2dp"
+                            android:layout_marginStart="8dp">
+
+                            <GridLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:columnCount="2"
+                                android:rowCount="2">
+                                <!-- Contests -->
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_columnWeight="1"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_margin="2dp"
+                                    android:padding="@dimen/dimen_4dp"
+                                    android:background="@drawable/white_rectangle">
+
+                                    <TextView
+                                        android:text="Contests"
+                                        android:textSize="14sp"
+                                        android:textColor="#666666"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                    <TextView
+                                        android:text="23"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+
+
+                                <!-- Matches -->
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_columnWeight="1"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_margin="2dp"
+                                    android:padding="@dimen/dimen_4dp"
+                                    android:background="@drawable/white_rectangle">
+
+                                    <TextView
+                                        android:text="Matches"
+                                        android:textSize="14sp"
+                                        android:textColor="#666666"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                    <TextView
+                                        android:text="22"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+
+
+                                <!-- Matches -->
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_columnWeight="1"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:background="@drawable/white_rectangle"
+                                    android:layout_margin="2dp"
+                                    android:padding="@dimen/dimen_4dp">
+
+                                    <TextView
+                                        android:text="Matches"
+                                        android:textSize="14sp"
+                                        android:textColor="#666666"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                    <TextView
+                                        android:text="22"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+
+                                <!-- Sports -->
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_columnWeight="1"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_margin="2dp"
+                                    android:background="@drawable/white_rectangle"
+                                    android:padding="@dimen/dimen_4dp">
+
+                                    <TextView
+                                        android:text="Sports"
+                                        android:textSize="14sp"
+                                        android:textColor="#666666"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                    <TextView
+                                        android:text="1"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+
+                            </GridLayout>
+
+                        </LinearLayout>
+
+
+                        </LinearLayout>
+                        <!-- Since date -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/white_rectangle"
+                            android:padding="@dimen/dimen_10dp"
+                            android:text="@string/you_have_been_playing_on_dream11_since"
+                            android:textColor="#000000"
+                            android:textSize="14sp"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRecentlyPlayed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:text="Recently Played"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:layout_marginHorizontal="@dimen/dimen_15dp"
+                    android:layout_below="@id/rvScoreView"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvViewAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey800"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:text="View All"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:layout_marginHorizontal="@dimen/dimen_15dp"
+                    android:layout_below="@id/rvScoreView"/>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPlayedList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvRecentlyPlayed"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:clipToPadding="false"
+                    android:overScrollMode="never"
+                    tools:listitem="@layout/adapter_recently_played_list_item"
+                    android:layout_marginHorizontal="@dimen/dimen_20dp"/>
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

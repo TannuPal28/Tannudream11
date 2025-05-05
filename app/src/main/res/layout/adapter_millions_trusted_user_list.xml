@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dimen_10dp"
+        android:background="@drawable/btn_grey_background"
+        android:layout_margin="@dimen/dimen_5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_10dp">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/userProfile"
+                android:layout_width="@dimen/dimen_100dp"
+                android:layout_height="@dimen/dimen_100dp"
+                android:src="@drawable/winner_img"
+                android:scaleType="centerCrop"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/userExp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/userProfile"
+                android:layout_alignParentEnd="true"
+                android:text="i am so happy i still can't believe i seacured Rank 2 on Dream 11."
+                android:textColor="@color/grey600"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginHorizontal="@dimen/dimen_10dp"
+                android:textSize="@dimen/dimen_12sp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBottom="@id/userProfile"
+                android:layout_toEndOf="@+id/userProfile"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Gopal Shalikaram Mokasare"
+                android:textColor="@color/grey600"
+                android:textSize="@dimen/dimen_12sp"
+                android:layout_marginHorizontal="@dimen/dimen_10dp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

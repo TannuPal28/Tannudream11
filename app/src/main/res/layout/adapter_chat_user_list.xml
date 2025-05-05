@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_10dp"
+        app:cardCornerRadius="@dimen/dimen_10dp"
+        android:background="@drawable/btn_grey_background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_5dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userImg"
+                android:layout_width="@dimen/dimen_40dp"
+                android:layout_height="@dimen/dimen_40dp"
+                android:src="@drawable/user_icon1"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/userImg"
+                android:layout_alignParentEnd="true"
+                android:text="Future fantasy"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="@dimen/dimen_14dp"
+                android:paddingHorizontal="@dimen/dimen_10dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTeamName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userName"
+                android:layout_toStartOf="@+id/tvDate"
+                android:layout_toEndOf="@+id/userImg"
+                android:paddingHorizontal="@dimen/dimen_10dp"
+                android:text="RR vs GT :Top Rankers!"
+                android:textColor="@color/grey500"
+                android:textSize="@dimen/dimen_12sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dimen_12sp"
+                android:textColor="@color/grey500"
+                android:text="05/05/23"
+                android:layout_below="@id/userName"
+                android:layout_alignParentEnd="true"
+                android:elevation="0dp"
+                android:paddingHorizontal="@dimen/dimen_10dp"/>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userImg"
+                android:layout_toEndOf="@id/userImg"
+                android:layout_alignParentEnd="true"
+                app:cardCornerRadius="@dimen/dimen_10dp"
+                app:cardBackgroundColor="@color/grey100"
+                android:layout_margin="@dimen/dimen_10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No Active LeaderBoard"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:drawableStart="@drawable/mail"
+                    android:padding="@dimen/dimen_10dp"/>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

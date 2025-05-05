@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.AppLanguageActivity">
+
+        <include
+            android:id="@+id/head"
+            layout="@layout/activity_mainheader"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_below="@id/head">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSelectLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Language"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/blue_grey900"
+                android:textSize="@dimen/dimen_12sp"
+                android:layout_margin="@dimen/dimen_10dp"/>
+
+            <LinearLayout
+                android:id="@+id/llEnglish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_language_selected"
+                android:padding="16dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_margin="@dimen/dimen_10dp"
+                android:layout_below="@+id/tvSelectLanguage">
+
+                <TextView
+                    android:id="@+id/tvEnglish"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="English"
+                    android:textSize="16sp"
+                    android:textColor="@color/addgreen"/>
+
+                <RadioButton
+                    android:id="@+id/rbEnglish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:checked="true"
+                    android:focusableInTouchMode="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llHindi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_language_unselected"
+                android:padding="16dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_margin="@dimen/dimen_10dp"
+                android:layout_below="@id/llEnglish">
+
+                <TextView
+                    android:id="@+id/tvHindi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Hindi"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"/>
+
+                <RadioButton
+                    android:id="@+id/rbHindi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMarathi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_language_unselected"
+                android:padding="16dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_margin="@dimen/dimen_10dp"
+                android:layout_below="@id/llHindi">
+
+                <TextView
+                    android:id="@+id/tvMarathi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Marathi"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"/>
+
+                <RadioButton
+                    android:id="@+id/rbMarathi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40dp"
+                android:background="@drawable/dark_rectangle_green"
+                android:text="continue in english"
+                android:textColor="@color/white"
+                android:layout_margin="@dimen/dimen_10dp"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

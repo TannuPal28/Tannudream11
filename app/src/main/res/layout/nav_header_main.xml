@@ -11,7 +11,6 @@
         android:orientation="vertical">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:background="@color/black"
@@ -46,7 +45,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="12dp"
-
                 android:text="Charul khandelwal"
                 android:textColor="@android:color/white"
                 android:textSize="14sp"
@@ -124,6 +122,7 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
         <LinearLayout
+            android:id="@+id/llMyBalance"
             android:layout_width="match_parent"
             android:layout_height="43dp"
             android:orientation="horizontal"
@@ -177,10 +176,10 @@
                 android:layout_marginTop="-2dp"
                 android:textColor="@color/blue_grey900"
                 android:textStyle="bold">
-
             </TextView>
 
         </LinearLayout>
+
         <TextView
             android:id="@+id/addCash"
             android:layout_width="match_parent"
@@ -223,6 +222,7 @@
 
             </ImageView>
             <TextView
+                android:id="@+id/chat"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="Chat"
@@ -255,13 +255,13 @@
             </ImageView>
 
             <TextView
+                android:id="@+id/tvWinners"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="Winners"
                 android:drawablePadding="10dp"
                 android:paddingTop="15dp"
                 android:textSize="13dp"
-
                 android:background="@drawable/bg_btn_background_white"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
@@ -289,9 +289,9 @@
             </ImageView>
 
             <TextView
+                android:id="@+id/tvMyInfo"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-
                 android:text="My Info &amp; Settings"
                 android:drawablePadding="15dp"
                 android:paddingTop="14dp"
@@ -325,9 +325,9 @@
 
             </ImageView>
             <TextView
+                android:id="@+id/tvHowToPlay"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-
                 android:text="How to Play"
                 android:drawablePadding="15dp"
                 android:paddingTop="15dp"
@@ -395,6 +395,7 @@
 
             </ImageView>
             <TextView
+                android:id="@+id/tvMore"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
 

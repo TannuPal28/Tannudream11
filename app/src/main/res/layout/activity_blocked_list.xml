@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".activity.BlockedListActivity">
+        <include
+            android:id="@+id/head"
+            layout="@layout/activity_mainheader"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_below="@+id/head">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dimen_150dp"
+                android:layout_height="@dimen/dimen_150dp"
+                android:src="@drawable/bats_hvr"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dimen_14dp"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen_15dp"
+                android:text="You haven't blocked anyone."
+                android:textColor="@color/black"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dimen_14dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/dimen_10dp"
+                android:text="It seems like you do not have any new contacts to invite to Dream11."/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

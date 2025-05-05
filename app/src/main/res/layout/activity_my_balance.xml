@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.MyBalanceActivity">
+
+        <include
+            layout="@layout/activity_mainheader"
+            android:id="@+id/head"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey100"
+            android:layout_below="@id/head">
+
+            <RelativeLayout
+                android:id="@+id/rlBGView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_100dp"
+                android:background="@drawable/toolbar_gradient_new"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/dimen_10dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginHorizontal="@dimen/dimen_20dp"
+                android:layout_below="@id/rlBGView"
+                android:layout_marginTop="-80dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:id="@+id/rlCurrentBal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green_50">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivWallet"
+                            android:layout_width="@dimen/dimen_30dp"
+                            android:layout_height="@dimen/dimen_30dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/wallet8"
+                            android:layout_margin="@dimen/dimen_15dp"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCuurrentBalance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Current Balance"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:layout_toEndOf="@+id/ivWallet"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginStart="@dimen/dimen_5dp"
+                            android:layout_marginTop="@dimen/dimen_15dp"/>
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvCuurrentBalance"
+                            android:layout_toEndOf="@+id/ivWallet"
+                            android:drawableStart="@drawable/rupee4"
+                            android:drawableTint="@color/greenBtn"
+                            android:text="6.5"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textColor="@color/greenBtn"/>
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_35dp"
+                            android:text="ADD Cash"
+                            android:layout_alignParentEnd="true"
+                            android:background="@drawable/dark_rectangle_green"
+                            android:layout_margin="@dimen/dimen_15dp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/roboto_medium"
+                            android:padding="@dimen/dimen_5dp"/>
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAmounth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Amount Unutilised"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:drawableEnd="@drawable/ic_error"
+                        android:drawablePadding="@dimen/dimen_10dp"
+                        android:layout_marginStart="@dimen/dimen_10dp"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:layout_below="@+id/rlCurrentBal"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAmountValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:text="0"
+                        android:drawablePadding="@dimen/dimen_5dp"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="@dimen/dimen_10dp"
+                        android:drawableStart="@drawable/rupee_icon_1"
+                        android:layout_below="@+id/tvAmounth"/>
+
+                    <View
+                        android:id="@+id/viewOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey100"
+                        android:layout_below="@+id/tvAmountValue"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvWinnings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Winnings"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:drawableEnd="@drawable/ic_error"
+                        android:drawablePadding="@dimen/dimen_10dp"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:layout_marginStart="@dimen/dimen_10dp"
+                        android:layout_below="@+id/viewOne"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvWinningsValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:text="6.5"
+                        android:drawablePadding="@dimen/dimen_5dp"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="@dimen/dimen_10dp"
+                        android:drawableStart="@drawable/rupee_icon_1"
+                        android:layout_below="@+id/tvWinnings"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimen_30dp"
+                        android:text="VERIFY TO WITHDRAW"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:background="@drawable/btn_grey_background"
+                        android:paddingHorizontal="@dimen/dimen_10dp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/viewOne"/>
+
+                    <View
+                        android:id="@+id/viewTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey100"
+                        android:layout_below="@+id/tvWinningsValue"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDiscountBonus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Discount Bonus"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:drawableEnd="@drawable/ic_error"
+                        android:drawablePadding="@dimen/dimen_10dp"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:layout_marginStart="@dimen/dimen_10dp"
+                        android:layout_below="@+id/viewTwo"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvWDiscountBonusValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:text="0"
+                        android:drawablePadding="@dimen/dimen_5dp"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="@dimen/dimen_10dp"
+                        android:drawableStart="@drawable/rupee_icon_1"
+                        android:layout_below="@+id/tvDiscountBonus"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/dimen_10dp"
+                        android:layout_below="@+id/tvWDiscountBonusValue"
+                        app:cardBackgroundColor="@color/grey100"
+                        android:layout_margin="@dimen/dimen_10dp"
+                        android:elevation="0dp">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/rupee_icon"
+                            android:drawablePadding="@dimen/dimen_10dp"
+                            android:padding="@dimen/dimen_10dp"
+                            android:text="Maximum usable discount bonus per match = 10% of entry"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:drawableEnd="@drawable/arrow_icon_mr"/>
+                    </androidx.cardview.widget.CardView>
+
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/rlTransactions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cvView"
+                android:background="@drawable/bg_btn_background_white"
+                android:layout_margin="@dimen/dimen_20dp"
+                android:padding="@dimen/dimen_10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivMyTransaction"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/settings"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMyTransaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_10dp"
+                    android:layout_toStartOf="@+id/appCompatImageView2"
+                    android:layout_toEndOf="@+id/ivMyTransaction"
+                    android:text="My Transactions"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:fontFamily="@font/roboto_bold"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appCompatImageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/dimen_10dp"
+                    android:src="@drawable/arrow_icon_mr" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Review last 6 months transactions"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:layout_below="@+id/tvMyTransaction"
+                    android:layout_marginHorizontal="@dimen/dimen_10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/ivMyTransaction"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlManagePayments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlTransactions"
+                android:background="@drawable/bg_btn_background_white"
+                android:layout_marginHorizontal="@dimen/dimen_20dp"
+                android:padding="@dimen/dimen_10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivManagePayments"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/settings"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvManagePayments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_10dp"
+                    android:layout_toStartOf="@+id/ivPaymentArrow"
+                    android:layout_toEndOf="@+id/ivManagePayments"
+                    android:text="Manage Payments"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:fontFamily="@font/roboto_bold"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPaymentArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/dimen_10dp"
+                    android:src="@drawable/arrow_icon_mr" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add/Remove paym,ent instruments"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:layout_below="@+id/tvManagePayments"
+                    android:layout_marginHorizontal="@dimen/dimen_10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/ivManagePayments"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlMyKycDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlManagePayments"
+                android:background="@drawable/bg_btn_background_white"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_marginHorizontal="@dimen/dimen_20dp"
+                android:padding="@dimen/dimen_10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivKycDetails"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/settings"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvKycDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_10dp"
+                    android:layout_toStartOf="@+id/ivPaymentArrow3"
+                    android:layout_toEndOf="@+id/ivKycDetails"
+                    android:text="My KYC Details"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPaymentArrow3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/dimen_10dp"
+                    android:src="@drawable/arrow_icon_mr" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Mobile, Email,PAN &amp; Bank a/c"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:layout_below="@+id/tvKycDetails"
+                    android:layout_marginHorizontal="@dimen/dimen_10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/ivKycDetails"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlInvite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlMyKycDetails"
+                android:background="@drawable/bg_btn_background_white"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_marginHorizontal="@dimen/dimen_20dp"
+                android:padding="@dimen/dimen_10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivInvite"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/settings"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvInviteFriends"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_10dp"
+                    android:layout_toStartOf="@+id/ivPaymentArrow4"
+                    android:layout_toEndOf="@+id/ivInvite"
+                    android:text="Invite &amp; Collect"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPaymentArrow4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/dimen_10dp"
+                    android:src="@drawable/arrow_icon_mr" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bring your friends on Dream11 and earn rewards"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:layout_below="@+id/tvInviteFriends"
+                    android:layout_marginHorizontal="@dimen/dimen_10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/ivInvite"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

@@ -98,6 +98,34 @@
     <string name="dream_coins_balance">DreamCoins Balance</string>
     <string name="navigation_drawer_open">Open Drawer</string>
     <string name="navigation_drawer_close">Close Drawer</string>
-
-
+    <string name="permission_and_settings">Permissions and Settings</string>
+    <string name="app_language">App Language</string>
+    <string name="manage_account">Manage Account</string>
+    <string name="logout">Logout</string>
+    <string name="permissions">Permissions</string>
+    <string name="make_me_discoverable">Make Me Discoverable</string>
+    <string name="allow_whatsapp_messages">Allow Whatsapp messages</string>
+    <string name="friends_can_find_and_follow_you_when_they_sync_their_phone_contacts">Friends can find and follow you when they sync their phone contacts</string>
+    <string name="access_dream11_updates_offers_and_support">Access Dream11 updates, offers, and support</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="display_my_full_name_on_profile">Display my full name on profile</string>
+    <string name="your_full_name_will_be_visible_to_everyone_who_views_your_profile">Your full name will be visible to everyone who views your profile</string>
+    <string name="gamePlay">GamePlay</string>
+    <string name="show_my_previous_teams">Show my previous teams</string>
+    <string name="people_who_view_you_profile_will_be_able_to_see_teams_that_you_have_created">People who view your profile will be able to see teams that you have created</string>
+    <string name="allow_msg_request">Allow Message Requests</string>
+    <string name="people_will_be_able_to_send_you_message_request">People will be able to send you message requests</string>
+    <string name="people_you_dont_have_a_dm_with_will_be_able_to_challenge_you_to_contests">People you don\'t have a DM with will be able to challenge you to contests</string>
+    <string name="allow_challenege">Allow Challenges</string>
+    <string name="safety">Safety</string>
+    <string name="people_i_have_blocked">People I have blocked</string>
+    <string name="checkout_the_people_who_you_have_blocked">Checkout the people who you have blocked</string>
+    <string name="winner_count"><b>116</b> Crorepatis . <b>4,806 </b>Lakhpatis</string>
+    <string name="community_guidlines">Community Guidelines</string>
+    <string name="jobs">Jobs</string>
+    <string name="legality">Legality</string>
+    <string name="about_us">About Us</string>
+    <string name="terms_conditions_one">Terms And Conditions</string>
+    <string name="follower"> <b>0</b> Followers</string>
+    <string name="you_have_been_playing_on_dream11_since"> You have been playing on Dream11 since <b>Mar 2020</b> </string>
 </resources>
