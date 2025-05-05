@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout
+    android:id="@+id/RL_Login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bacl_splash"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"
+            android:src="@drawable/logo_splash" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="start"
+            android:gravity="center"
+            android:background="@drawable/bg_login"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login/Register"
+                android:visibility="gone"
+                android:textSize="18sp"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/fb_login_button"
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/btn_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:translationY="-5dp"
+            android:background="@drawable/white_rectangle_new"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_loginEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_20dp"
+                android:theme="@style/MyTextInputLayout"
+                android:textColorHint="#787878">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="3dp"
+                    app:cardBackgroundColor="#f5f5f5"
+                    app:cardMaxElevation="@dimen/dimen_2dp"
+                    android:layout_margin="@dimen/dimen_5dp"
+                    app:cardElevation="2dp">
+                <EditText
+                    android:id="@+id/et_EmailMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50dp"
+                    android:layout_centerHorizontal="true"
+                    android:hint="Mobile number"
+                    android:fontFamily="@font/roboto_regular"
+                    android:padding="12dp"
+                    android:singleLine="true"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/black"
+                    android:textColorHint="#787878"
+                    android:textSize="16sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_2dp"
+                        android:background="@color/black"
+                        android:layout_gravity="bottom"/>
+                </androidx.cardview.widget.CardView>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_20dp"
+                android:text="I certify that I am above 18 years"
+                android:gravity="center"
+                android:textColor="#7a7a7a"
+                android:fontFamily="@font/roboto_regular"
+                android:drawableTint="#0fa036"
+                android:textSize="14sp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_loginPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColorHint="@color/white"
+                app:passwordToggleEnabled="true"
+                android:theme="@style/MyTextInputLayout"
+                android:visibility="gone"
+                app:passwordToggleTint="@color/white"
+                >
+
+                <EditText
+                    android:id="@+id/et_Password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="@color/white"
+                    android:hint="Enter Password"
+                    android:inputType="textPassword"
+                    android:padding="12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/tv_Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:background="@drawable/white_rectangle"
+                    android:elevation="3dp"
+                    android:backgroundTint="#109e38"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/trimsemibold"
+                    android:textSize="16sp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="CONTINUE" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="By continuing, I agree to Dream11's T&amp;C."
+                    android:gravity="center"
+                    android:textColor="#595f72"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Have an Invite Code?"
+                    android:gravity="center"
+                    android:textColor="#987b14"
+
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_ForgotPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:visibility="gone"
+                    android:text="@string/forgot_password"
+                    android:textColor="@color/login_sign_up"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LL_FaceGoogle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="20dp"
+        android:visibility="gone"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/RL_FBLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/im_fbicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:scaleType="center"
+                android:src="@drawable/fb_icon" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RL_GmailLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/im_goggleicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:scaleType="center"
+                android:src="@drawable/google_icon" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
+</layout>
